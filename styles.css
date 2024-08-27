@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header .search-bar {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+header .search-bar input {
+    padding: 5px;
+    font-size: 16px;
+}
+
+header .search-bar button {
+    padding: 6px 12px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+header .icons a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.banner img {
+    width: 100%;
+    display: block;
+}
+
+.categories {
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.categories h2 {
+    margin-bottom: 20px;
+}
+
+.category-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.category-item {
+    text-align: center;
+    width: 30%;
+}
+
+.category-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.featured-products {
+    padding: 20px;
+    background-color: #eaeaea;
+}
+
+.featured-products h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.product-item {
+    text-align: center;
+    width: 30%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li {
+    margin-left: 20px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
