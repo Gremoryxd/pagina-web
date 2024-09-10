@@ -253,3 +253,17 @@ footer ul li a {
         margin-bottom: 10px;
     }
 }
+
+.category-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.category-item a:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.category-item a:hover p {
+    color: #007bff; /* Cambia el color al pasar el mouse por encima */
+}
