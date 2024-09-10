@@ -1,4 +1,3 @@
-/* Estilos globales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,7 +5,6 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Encabezado */
 header {
     background-color: #333;
     color: white;
@@ -14,16 +12,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas más pequeñas */
 }
 
 header .logo {
     font-size: 24px;
     font-weight: bold;
 }
-
 header .logo img {
-    height: 80px; /* Ajusta la altura del logo */
+    height: 100px; /* Ajusta esta altura según el tamaño de tu logo */
     width: auto;
 }
 
@@ -32,7 +28,6 @@ header nav ul {
     display: flex;
     margin: 0;
     padding: 0;
-    gap: 15px; /* Espacio entre los elementos del menú */
 }
 
 header nav ul li {
@@ -42,20 +37,16 @@ header nav ul li {
 header nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1rem; /* Ajuste del tamaño del texto */
 }
 
 header .search-bar {
-    display: flex;
-    align-items: center;
     margin-left: auto;
+    margin-right: 20px;
 }
 
 header .search-bar input {
     padding: 5px;
-    font-size: 14px; /* Tamaño de la fuente reducido */
-    border: none;
-    border-radius: 5px;
+    font-size: 16px;
 }
 
 header .search-bar button {
@@ -64,27 +55,21 @@ header .search-bar button {
     color: white;
     border: none;
     cursor: pointer;
-    margin-left: 10px;
-}
-
-header .icons {
-    display: flex;
-    gap: 20px; /* Espacio entre los íconos */
 }
 
 header .icons a {
     color: white;
-    font-size: 1.5rem;
+    margin-left: 20px;
     text-decoration: none;
+    font-size: 20px;
 }
 
-/* Imagen de banner */
 .banner img {
     width: 100%;
     display: block;
 }
 
-/* Sección de categorías */
+/* Estilo de la sección de categorías */
 .categories {
     padding: 20px;
     text-align: center;
@@ -97,16 +82,17 @@ header .icons a {
 
 .categories .category-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas grandes */
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); /* 5 columnas */
+    gap: 20px; /* Espacio entre los elementos */
     padding: 20px;
     background-color: white;
+    justify-content: center; /* Centra el contenido de la cuadrícula horizontalmente */
 }
 
+/* Asegura que los items de la categoría estén centrados */
 .categories .category-item {
     text-align: center;
     border-radius: 10px;
-    transition: transform 0.3s ease;
 }
 
 .categories .category-item img {
@@ -119,7 +105,7 @@ header .icons a {
     margin-top: 10px;
 }
 
-/* Productos destacados */
+
 .featured-products {
     padding: 20px;
     background-color: #eaeaea;
@@ -131,18 +117,16 @@ header .icons a {
 }
 
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    gap: 20px;
-    justify-content: center;
+    display: flex;
+    justify-content: space-around;
 }
 
 .product-item {
     text-align: center;
+    width: 30%;
     background-color: white;
     padding: 10px;
     border-radius: 10px;
-    transition: transform 0.3s ease;
 }
 
 .product-item img {
@@ -151,7 +135,6 @@ header .icons a {
     border-radius: 10px;
 }
 
-/* Pie de página */
 footer {
     background-color: #333;
     color: white;
@@ -175,8 +158,6 @@ footer ul li a {
     color: white;
     text-decoration: none;
 }
-
-/* Media Queries para pantallas más pequeñas */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -190,52 +171,18 @@ footer ul li a {
     header nav ul {
         flex-direction: column;
         align-items: flex-start;
-        width: 100%;
-        gap: 10px;
     }
 
     header nav ul li {
         margin-left: 0;
+        margin-bottom: 10px;
     }
 
     header .search-bar {
+        margin-left: 0;
+        margin-right: 0;
         width: 100%;
-        margin: 10px 0;
-    }
-
-    header .icons {
-        justify-content: flex-start;
-        width: 100%;
-    }
-
-    .category-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
-    }
-
-    .category-item,
-    .product-item {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 10px;
-    }
-
-    header .logo img {
-        height: 50px;
-    }
-
-    header nav ul {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
+        margin-bottom: 10px;
     }
 
     header .icons {
@@ -245,7 +192,41 @@ footer ul li a {
 
     .category-grid,
     .product-grid {
-        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-item,
+    .product-item {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Ajustes para pantallas pequeñas (celulares) */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    header .logo {
+        font-size: 20px;
+    }
+
+    header nav ul {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    header .icons {
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
     }
 
     .category-item img,
@@ -253,19 +234,36 @@ footer ul li a {
         width: 100%;
     }
 
+    .category-grid,
+    .product-grid {
+        width: 100%;
+    }
+
+    .product-item {
+        padding: 5px;
+    }
+
     footer ul {
         flex-direction: column;
         align-items: center;
     }
+
+    footer ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
 }
 
-/* Efectos en hover */
+.category-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .category-item a:hover img {
     transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
 
 .category-item a:hover p {
-    color: #007bff;
+    color: #007bff; /* Cambia el color al pasar el mouse por encima */
 }
-
-
