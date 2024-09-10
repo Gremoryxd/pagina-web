@@ -1,3 +1,4 @@
+/* Estilos globales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,6 +6,7 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Encabezado */
 header {
     background-color: #333;
     color: white;
@@ -12,10 +14,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas más pequeñas */
 }
 
 header .logo img {
-    height: 100px;
+    height: 80px; /* Reduce el tamaño del logo */
     width: auto;
 }
 
@@ -24,6 +27,7 @@ header nav ul {
     display: flex;
     margin: 0;
     padding: 0;
+    gap: 15px; /* Agrega espacio entre los elementos del menú */
 }
 
 header nav ul li {
@@ -33,16 +37,20 @@ header nav ul li {
 header nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 1rem; /* Tamaño del texto */
 }
 
 header .search-bar {
+    display: flex;
+    align-items: center;
     margin-left: auto;
-    margin-right: 20px;
 }
 
 header .search-bar input {
     padding: 5px;
-    font-size: 16px;
+    font-size: 14px; /* Tamaño de la fuente reducido */
+    border: none;
+    border-radius: 5px;
 }
 
 header .search-bar button {
@@ -51,15 +59,21 @@ header .search-bar button {
     color: white;
     border: none;
     cursor: pointer;
+    margin-left: 10px;
+}
+
+header .icons {
+    display: flex;
+    gap: 20px; /* Espacio entre íconos */
 }
 
 header .icons a {
     color: white;
-    margin-left: 20px;
+    font-size: 1.5rem;
     text-decoration: none;
-    font-size: 20px;
 }
 
+/* Sección de productos */
 .product-list {
     padding: 20px;
     text-align: center;
@@ -92,6 +106,23 @@ header .icons a {
     border-radius: 10px;
 }
 
+.product-item p {
+    margin: 5px 0;
+}
+
+.product-item .description {
+    font-size: 14px;
+    color: #666;
+}
+
+.product-item .price {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Pie de página */
 footer {
     background-color: #333;
     color: white;
@@ -116,148 +147,55 @@ footer ul li a {
     text-decoration: none;
 }
 
-/* Ajustes para pantallas pequeñas (celulares) */
+/* Media Queries para pantallas pequeñas */
 @media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Cambia a una columna en pantallas pequeñas */
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px; /* Cambia el menú a una columna */
+    }
+
+    header .logo img {
+        height: 60px; /* Reduce el tamaño del logo aún más en pantallas pequeñas */
+    }
+
+    header .search-bar {
+        width: 100%; /* La barra de búsqueda ocupa todo el ancho */
+        margin-top: 10px;
+    }
+
+    header .search-bar input {
+        width: 100%; /* El input ocupa todo el ancho en móviles */
+    }
+
+    header .icons {
+        margin-top: 10px; /* Agrega margen superior para los íconos en pantallas pequeñas */
+    }
+
     .product-grid {
         grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas más pequeñas */
     }
 }
 
 @media (max-width: 480px) {
+    header .logo img {
+        height: 50px; /* Ajusta aún más el tamaño del logo en pantallas muy pequeñas */
+    }
+
+    header nav ul li a {
+        font-size: 0.9rem; /* Reduce un poco el tamaño del texto en pantallas muy pequeñas */
+    }
+
+    header .icons a {
+        font-size: 1.3rem; /* Ajusta el tamaño de los íconos en móviles */
+    }
+
     .product-grid {
         grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
     }
 }
 
-.product-item p {
-    margin: 5px 0;
-}
-
-.product-item .description {
-    font-size: 14px;
-    color: #666;
-}
-
-.product-item p {
-    margin: 5px 0;
-}
-
-.product-item .description {
-    font-size: 14px;
-    color: #666;
-}
-
-.product-item .price {
-    font-size: 16px;
-    color: #333;
-    font-weight: bold;
-    margin-top: 10px;
-}
-/* Estilos generales para el encabezado */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f8f8f8;
-}
-
-.logo img {
-    max-width: 150px; /* Tamaño del logo */
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li a {
-    text-decoration: none;
-    font-size: 1.1rem;
-    color: #333;
-}
-
-.search-bar {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.search-bar input {
-    padding: 5px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.search-bar button {
-    padding: 6px 12px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.icons {
-    display: flex;
-    gap: 15px;
-}
-
-.icons a {
-    font-size: 1.5rem;
-    color: #333;
-    text-decoration: none;
-}
-
-/* Media Queries para dispositivos móviles */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .logo img {
-        max-width: 120px; /* Reduce el tamaño del logo en móviles */
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .search-bar {
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .search-bar input {
-        width: 100%;
-    }
-
-    .icons {
-        margin-top: 10px;
-    }
-}
-
-/* Media Queries para pantallas aún más pequeñas (480px) */
-@media (max-width: 480px) {
-    .logo img {
-        max-width: 100px;
-    }
-
-    nav ul li a {
-        font-size: 1rem; /* Reduce el tamaño del texto en móviles */
-    }
-
-    .search-bar input {
-        font-size: 0.9rem; /* Ajusta el tamaño del texto en el campo de búsqueda */
-    }
-
-    .icons a {
-        font-size: 1.3rem; /* Ajusta el tamaño de los íconos */
-    }
-}
