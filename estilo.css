@@ -100,10 +100,11 @@ header .icons a {
 }
 
 .product-item img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 15px;
+    max-width: 80%; /* Limita el ancho máximo de la imagen al 80% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: contain; /* Asegura que la imagen no se recorte */
+    border-radius: 10px;
+    margin: 0 auto; /* Centra la imagen dentro del contenedor */
 }
 
 .product-item p {
