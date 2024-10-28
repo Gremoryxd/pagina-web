@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NVMe</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <img src="logox.png" alt="Mi Tienda">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="categorias.html">Categorías</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Mi Cuenta</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar productos...">
+            <button>Buscar</button>
+        </div>
+        <div class="icons">
+            <a href="#">🛒</a>
+            <a href="#">👤</a>
+        </div>
+    </header>
+    <!-- Opciones de ordenación -->
+    <div class="sort-options">
+        <label for="sort">Ordenar por:</label>
+        <select id="sort" onchange="sortProducts()">
+            <option value="default">Selecciona...</option>
+            <option value="price-asc">Precio: Menor a Mayor</option>
+            <option value="price-desc">Precio: Mayor a Menor</option>
+            <option value="name-asc">Nombre: A-Z</option>
+            <option value="name-desc">Nombre: Z-A</option>
+        </select>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="product-list">
+        <h2>NVMe</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="m21.webp" alt="Procesador">
+                <p>WD Blue SN570 NVMe SSD</p>
+                <p class="description">•	Capacidad: 256 GB.<br>
+                    •	Velocidad de lectura: Hasta 3,500 MB/s.<br>
+                    •	Velocidad de escritura: Hasta 3,000 MB/s.<br>
+                    •	Características: Excelente equilibrio entre rendimiento y costo, ideal para usuarios que buscan un aumento significativo en la velocidad del sistema sin un precio elevado.<br>
+                    •	Ideal para: Mejorar el rendimiento general del sistema, tiempos de carga rápidos en juegos, y tareas de productividad.<br>                    
+                </p>
+                <p class="price" data-price="39.00">$39.00</p>
+            </div>
+            <div class="product-item">
+                <img src="m.22.webp" alt="Tarjeta de Video">
+                <p>UNIDAD DE ALMACENAMIENTO M.2 KINGSTON 500GB NV2 SNV2S/500G PCI-E 4.0</p>
+                <p class="description">Características:
+                    •	Alcanza velocidades de lectura/escritura de hasta 3.500/2.800 MB/s1, con menor consumo eléctrico y generando menos calor almacenamiento hasta los 2 TB2, además de ahorrar espacio para otros componentes. <br>
+                    •	Especificaciones:<br>
+                    •	Interfaz: PCIe 4.0 x4 NVMe<br>
+                    •	Capacidades: 500 GB<br>
+                    •	Temperatura de almacenamiento: -40 °C ~ 85 °C<br>
+                    •	Dimensiones: 22 mm x 80 mm x 2,2 mm<br>
+                    
+                    <p class="price" data-price="59.95">$59.95</p>
+
+    
+
+    <!-- Pie de Página -->
+    <footer>
+        <ul>
+            <li><a href="#">Aviso Legal</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#">Términos de Servicio</a></li>
+        </ul>
+        <p>&copy; 2024 Mi Tienda. Todos los derechos reservados.</p>
+    </footer>
+    <!-- Enlace a script.js -->
+    <script src="script.js"></script>
+</body>
+</html>

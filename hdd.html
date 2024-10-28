@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discos Mecanicos</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <img src="logox.png" alt="Mi Tienda">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="categorias.html">Categorías</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Mi Cuenta</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar productos...">
+            <button>Buscar</button>
+        </div>
+        <div class="icons">
+            <a href="#">🛒</a>
+            <a href="#">👤</a>
+        </div>
+    </header>
+    <!-- Opciones de ordenación -->
+    <div class="sort-options">
+        <label for="sort">Ordenar por:</label>
+        <select id="sort" onchange="sortProducts()">
+            <option value="default">Selecciona...</option>
+            <option value="price-asc">Precio: Menor a Mayor</option>
+            <option value="price-desc">Precio: Mayor a Menor</option>
+            <option value="name-asc">Nombre: A-Z</option>
+            <option value="name-desc">Nombre: Z-A</option>
+        </select>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="product-list">
+        <h2>Discos Mecanicos</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="hdd1.webp" alt="Procesador">
+                <p>Seagate Barracuda 2TB 7200RPM</p>
+                <p class="description">•Capacidad: 2TB.<br>
+                    •	Velocidad: 7200 RPM.<br>
+                    •	Caché: 256MB.<br>
+                    •	Características: Gran capacidad de almacenamiento, velocidad adecuada para un HDD, y buena durabilidad a un precio accesible.<br>
+                    •	Ideal para: Almacenamiento masivo de datos, como archivos multimedia, backups, y juegos que no requieren tiempos de carga extremadamente rápidos.<br>                   
+                </p>
+                <p class="price" data-price="84.95">$84.95</p>
+            </div>
+        <div class="product-list">
+            <h2>Discos Mecanicos</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="hdd2.webp" alt="Procesador">
+                    <p>DISCO DURO DE PC SEAGATE BARRACUDA 1TB</p>
+                    <p class="description">Características:<br>
+                        •	Un dispositivo de almacenamiento magnético que guarda y recupera datos mediante discos giratorios cubiertos de material magnético. Un cabezal de lectura/escritura accede a los datos cuando el disco gira a altas velocidades.<br>
+                        •	Especificaciones:<br>
+                        •	Capacidad de Almacenamiento:  1TB<br>
+                        •	Velocidad de Rotación: 5400 RPM o 7200 RPM.<br>
+                        •	Interfaz: SATA III (6 Gb/s).<br>
+                        •	Caché: Desde 32 MB hasta 256 MB<br>
+                        •	Tamaño: 3.5 pulgadas <br>
+                        •	Tecnología de Grabación: Grabación magnética convencional (CMR) en la mayoría de modelos, aunque algunos pueden usar SMR (grabación magnética escalonada) para mayores densidades.<br>                        
+                    </p>
+                    <p class="price" data-price="64.95">$64.95</p>
+            </div>
+    <!-- Pie de Página -->
+    <footer>
+        <ul>
+            <li><a href="#">Aviso Legal</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#">Términos de Servicio</a></li>
+        </ul>
+        <p>&copy; 2024 Mi Tienda. Todos los derechos reservados.</p>
+    </footer>
+    <!-- Enlace a script.js -->
+    <script src="script.js"></script>
+</body>
+</html>
