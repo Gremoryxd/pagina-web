@@ -31,6 +31,17 @@
             <a href="#">👤</a>
         </div>
     </header>
+    <!-- Opciones de ordenación -->
+    <div class="sort-options">
+        <label for="sort">Ordenar por:</label>
+        <select id="sort" onchange="sortProducts()">
+            <option value="default">Selecciona...</option>
+            <option value="price-asc">Precio: Menor a Mayor</option>
+            <option value="price-desc">Precio: Mayor a Menor</option>
+            <option value="name-asc">Nombre: A-Z</option>
+            <option value="name-desc">Nombre: Z-A</option>
+        </select>
+    </div>
 
     <!-- Contenido Principal -->
     <div class="product-list">
@@ -91,6 +102,7 @@
         </ul>
         <p>&copy; 2024 Mi Tienda. Todos los derechos reservados.</p>
     </footer>
-
+    <!-- Enlace a script.js -->
+    <script src="script.js"></script>
 </body>
 </html>
